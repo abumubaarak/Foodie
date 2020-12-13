@@ -1,0 +1,53 @@
+.container{
+    display: grid;
+    grid-template-columns:[full-start]minmax(1rem,14rem)[center-start] repeat(8,[col-start]1fr[col-end])[center-end] minmax(1rem,10rem)[full-end] ;
+    grid-template-rows:90vh min-content min-content 30vw min-content min-content;
+    
+}
+@mixin col($margin) {
+     grid-column:1/-1 ;
+     margin: $margin 0;
+}
+
+@mixin margin($margin) {
+    margin: $margin 0;
+}
+.header__content{
+    grid-column: center-start/col-start 3;
+     display: grid; 
+     grid-template-rows:10rem 5rem 5rem 5rem 10rem 10rem 
+     
+}
+.header__navigation{
+     
+     grid-column: col-start 3/ full-end;
+    background-image: url(../img/img-2.jpg); 
+     background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 15% 100%);
+}
+.features{
+    @include margin(10rem);
+    grid-column: center-start/col-end 8;
+      display: grid;
+      grid-gap: 3rem;
+      grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+      text-align: center;
+}
+.menu{
+    @include col(3rem);
+ }
+.discover{
+    @include col(5rem);  
+    background-color: darkslategrey;
+}
+.newsletter{
+    
+    @include col(5rem); 
+    background-color: deeppink;
+}
+.footer{
+    
+    @include col(5rem); 
+    background-color: dodgerblue;
+}

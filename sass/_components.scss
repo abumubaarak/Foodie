@@ -1,0 +1,145 @@
+.header{
+
+    &__content{
+ 
+        &__logo{
+            font-size: 2.7rem;
+            font-weight: 700;
+            color: $color-primary;
+            align-self: center;
+        }
+
+        &__intro{
+          //  align-self: center;
+             grid-column: 1/-1;
+             grid-row: 4/6;
+
+            &__heading{
+            font-weight: 400;
+            font-size: 1.4rem;
+
+            &__sub{
+                font-size: 4rem;
+                font-weight: 500;
+                line-height: 4.5rem;
+                margin: 1rem 0;
+            }
+            
+          }
+
+         &__anytime{
+            font-weight: 400;
+            font-size: 1.4rem;  
+            margin-bottom: 7rem;
+        }
+
+        &__btn{
+            background-color: $color-primary;
+            padding: 2rem 3.3rem;
+            border-radius: .4rem;
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        &__btn::after{
+        content: "\2192";
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+        padding-left: 1rem;
+        padding-top: .4rem;
+
+        }
+        }
+
+        
+    }
+
+     
+    &__nav{
+         display: grid;
+         margin-left: 9rem;
+         margin-top: 3rem;
+          grid-template-columns: repeat(6, 10rem);
+        grid-gap: 1rem;
+        list-style: none;
+        justify-items: center;
+
+        &__item{
+
+            &__search{
+                fill: white;
+                width: 2rem;
+                height: 3.4rem;
+            }
+        }
+         
+
+        &__link{
+            
+            &:link,
+            &:visited{
+                color: white;
+                text-decoration: none;
+                font-size: 1.7rem;
+                font-weight: 400;
+     
+            }
+
+            &:hover,
+            &:active{
+                border-bottom: 2px solid black;;
+            }
+        }
+
+        
+    }
+}
+
+.features{
+
+    &__item{
+        background-color: white;
+        border: 3px solid #eee;
+        border-radius: .5rem;
+        padding: 2rem 7rem;
+
+        &__heading{
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: .5rem;
+            margin-bottom: 1rem;
+        }
+        &__photo{
+            width: 8rem;
+            height: 8rem;
+        }
+
+        &__sub{
+            font-weight: 400;
+            font-size: 1.4rem;  
+            color: #252323;
+            margin-bottom: 3.5rem;
+        }
+    }
+}
+
+.menu{
+
+    text-align: center;
+
+    &__heading{
+        
+        font-size: 4rem;
+        font-weight: 500;
+        line-height: 4.5rem;
+    }
+    &__sub{
+        font-weight: 400;
+            font-size: 1.4rem;  
+            color: #252323;
+            margin-top: 1rem;
+    }
+}

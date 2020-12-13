@@ -15,3 +15,135 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   line-height: 1.6; }
+
+.header__content__logo {
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: #51C83D;
+  align-self: center; }
+
+.header__content__intro {
+  grid-column: 1/-1;
+  grid-row: 4/6; }
+  .header__content__intro__heading {
+    font-weight: 400;
+    font-size: 1.4rem; }
+    .header__content__intro__heading__sub {
+      font-size: 4rem;
+      font-weight: 500;
+      line-height: 4.5rem;
+      margin: 1rem 0; }
+  .header__content__intro__anytime {
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin-bottom: 7rem; }
+  .header__content__intro__btn {
+    background-color: #51C83D;
+    padding: 2rem 3.3rem;
+    border-radius: .4rem;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 1.2rem; }
+  .header__content__intro__btn::after {
+    content: "\2192";
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    padding-left: 1rem;
+    padding-top: .4rem; }
+
+.header__nav {
+  display: grid;
+  margin-left: 9rem;
+  margin-top: 3rem;
+  grid-template-columns: repeat(6, 10rem);
+  grid-gap: 1rem;
+  list-style: none;
+  justify-items: center; }
+  .header__nav__item__search {
+    fill: white;
+    width: 2rem;
+    height: 3.4rem; }
+  .header__nav__link:link, .header__nav__link:visited {
+    color: white;
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: 400; }
+  .header__nav__link:hover, .header__nav__link:active {
+    border-bottom: 2px solid black; }
+
+.features__item {
+  background-color: white;
+  border: 3px solid #eee;
+  border-radius: .5rem;
+  padding: 2rem 7rem; }
+  .features__item__heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: .5rem;
+    margin-bottom: 1rem; }
+  .features__item__photo {
+    width: 8rem;
+    height: 8rem; }
+  .features__item__sub {
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: #252323;
+    margin-bottom: 3.5rem; }
+
+.menu {
+  text-align: center; }
+  .menu__heading {
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 4.5rem; }
+  .menu__sub {
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: #252323;
+    margin-top: 1rem; }
+
+.container {
+  display: grid;
+  grid-template-columns: [full-start] minmax(1rem, 14rem) [center-start] repeat(8, [col-start] 1fr [col-end]) [center-end] minmax(1rem, 10rem) [full-end];
+  grid-template-rows: 90vh min-content min-content 30vw min-content min-content; }
+
+.header__content {
+  grid-column: center-start/col-start 3;
+  display: grid;
+  grid-template-rows: 10rem 5rem 5rem 5rem 10rem 10rem; }
+
+.header__navigation {
+  grid-column: col-start 3/ full-end;
+  background-image: url(../img/img-2.jpg);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 15% 100%); }
+
+.features {
+  margin: 10rem 0;
+  grid-column: center-start/col-end 8;
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  text-align: center; }
+
+.menu {
+  grid-column: 1/-1;
+  margin: 3rem 0; }
+
+.discover {
+  grid-column: 1/-1;
+  margin: 5rem 0;
+  background-color: darkslategrey; }
+
+.newsletter {
+  grid-column: 1/-1;
+  margin: 5rem 0;
+  background-color: deeppink; }
+
+.footer {
+  grid-column: 1/-1;
+  margin: 5rem 0;
+  background-color: dodgerblue; }
