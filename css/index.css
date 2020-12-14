@@ -44,7 +44,12 @@ body {
     color: white;
     font-weight: 500;
     cursor: pointer;
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    transition: all .3s; }
+  .header__content__intro__btn:hover {
+    transform: translateY(-5rem) scale(1.2);
+    -webkit-box-shadow: 2px 5px 31px 6px #51C83D;
+    box-shadow: 2px 5px 31px 6px #51C83D; }
   .header__content__intro__btn::after {
     content: "\2192";
     color: white;
@@ -99,10 +104,51 @@ body {
     font-weight: 500;
     line-height: 4.5rem; }
   .menu__sub {
-    font-weight: 400;
-    font-size: 1.4rem;
-    color: #252323;
-    margin-top: 1rem; }
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: black;
+    margin-top: 1rem;
+    margin-bottom: 5rem; }
+  .menu__row__item:hover {
+    transform: translateY(-1rem) scale(1.2); }
+  .menu__row__item {
+    transition: all .3s; }
+    .menu__row__item__details {
+      display: grid;
+      justify-items: space-between;
+      align-items: center;
+      background-color: #51C83D;
+      -webkit-box-shadow: 2px 5px 31px -6px #51C83D;
+      box-shadow: 2px 5px 31px -6px #51C83D;
+      margin-top: -2rem;
+      padding-top: 2.3rem;
+      color: white;
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+      padding-left: 3rem;
+      padding-bottom: 1.4rem;
+      grid-template-columns: repeat(2, 1fr); }
+    .menu__row__item__photo {
+      width: 100%;
+      border-radius: 2rem;
+      height: 20rem;
+      object-fit: cover; }
+    .menu__row__item__name {
+      text-align: start;
+      grid-column: 1/-1;
+      font-size: 1.5rem;
+      font-weight: 500; }
+    .menu__row__item__rating {
+      justify-self: start;
+      font-size: 1.4rem;
+      font-weight: 400; }
+    .menu__row__item__amount {
+      font-size: 1.4rem; }
+    .menu__row__item__rating::before {
+      content: "\2606";
+      color: yellow;
+      font-weight: 400;
+      font-size: 2rem; }
 
 .container {
   display: grid;
@@ -130,8 +176,12 @@ body {
   text-align: center; }
 
 .menu {
-  grid-column: 1/-1;
-  margin: 3rem 0; }
+  margin: 2rem 0;
+  grid-column: center-start/col-end 8; }
+  .menu__row {
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
 
 .discover {
   grid-column: 1/-1;

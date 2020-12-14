@@ -35,7 +35,14 @@
       text-align: center;
 }
 .menu{
-    @include col(3rem);
+    @include margin(2rem);
+    grid-column: center-start/col-end 8;
+
+    &__row{
+        display: grid;       
+        grid-gap: 3rem;
+        grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+    }
  }
 .discover{
     @include col(5rem);  
