@@ -8,7 +8,8 @@ $medium-bp:74.1875em;//1187
 $medium_small-bp:45.9375em;//735
 $small-bp:41em;//634
 $small_1-bp:36.125em;
-$small_2-bp:31.4375em;
+$small_2-bp:32.5em;
+$small_3-bp:18.3125em;
 
 * {
     padding: 0;
@@ -50,6 +51,11 @@ $small_2-bp:31.4375em;
           }
           @media only screen and (max-width:$small_2-bp){
             font-size: 38%; 
+
+          }
+
+          @media only screen and (max-width:$small_3-bp){
+            font-size: 27%; 
 
           }
   }

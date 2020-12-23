@@ -22,9 +22,12 @@ html {
   @media only screen and (max-width: 36.125em) {
     html {
       font-size: 42.5%; } }
-  @media only screen and (max-width: 31.4375em) {
+  @media only screen and (max-width: 32.5em) {
     html {
       font-size: 38%; } }
+  @media only screen and (max-width: 18.3125em) {
+    html {
+      font-size: 27%; } }
 
 body {
   font-family: "Raleway", sans-serif;
@@ -105,7 +108,7 @@ body {
   @media only screen and (max-width: 84.75em) {
     .header__nav {
       margin-left: 5rem; } }
-  @media only screen and (max-width: 31.4375em) {
+  @media only screen and (max-width: 32.5em) {
     .header__nav {
       display: none; } }
   .header__nav__item__search {
@@ -121,6 +124,10 @@ body {
     border-bottom: 2px solid black; }
 
 @media only screen and (max-width: 36.125em) {
+  .features__item:nth-child(3) {
+    grid-column: 1/-1; } }
+
+@media only screen and (max-width: 45.9375em) {
   .features__item:nth-child(3) {
     grid-column: 1/-1; } }
 
@@ -232,6 +239,9 @@ body {
     .discover-center {
       padding-left: 5vw;
       padding-right: 5vw; } }
+  @media only screen and (max-width: 41em) {
+    .discover-center {
+      max-width: 65%; } }
   .discover-center__heading {
     font-size: 3.3rem;
     text-align: center;
@@ -239,6 +249,16 @@ body {
     line-height: 4.5rem;
     align-self: start;
     margin-bottom: 4rem; }
+    @media only screen and (max-width: 41em) {
+      .discover-center__heading {
+        font-size: 2.5rem;
+        line-height: 3.5rem; } }
+    @media only screen and (max-width: 32.5em) {
+      .discover-center__heading {
+        line-height: 3rem; } }
+    @media only screen and (max-width: 18.3125em) {
+      .discover-center__heading {
+        line-height: 3rem; } }
   .discover-center__image {
     cursor: pointer;
     display: grid;
@@ -270,15 +290,20 @@ body {
 
 .newsletter__email {
   border: none;
+  padding: 1rem;
+  font-size: 2rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
   grid-column: 1/span 3; }
 
 .newsletter__btn {
   background-color: #51C83D;
   color: white;
-  font-size: 1.4rem;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.9rem;
   border-radius: 2rem;
   border: none;
-  font-weight: 400;
+  font-weight: 300;
   padding: .8rem; }
 
 .newsletter__sub {
@@ -315,8 +340,16 @@ body {
   width: 45%;
   padding-top: 2rem; }
 
+@media only screen and (max-width: 41em) {
+  .footer__about {
+    grid-column: 1/-1; } }
+
 .footer__nav {
   list-style: none; }
+  @media only screen and (max-width: 41em) {
+    .footer__nav {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 10rem); } }
   .footer__nav__item {
     font-size: 1.4rem;
     padding: 1.4rem 0;
@@ -350,14 +383,19 @@ body {
     .container {
       grid-template-columns: [full-start] minmax(1rem, 6rem) [center-start] repeat(8, [col-start] 1fr [col-end]) [center-end] minmax(1rem, 6rem) [full-end];
       grid-template-rows: 85vh min-content min-content min-content min-content min-content; } }
+  @media only screen and (max-width: 45.9375em) {
+    .container {
+      grid-template-columns: [full-start] minmax(1rem, 6rem) [center-start] repeat(8, [col-start] 1fr [col-end]) [center-end] minmax(1rem, 6rem) [full-end];
+      grid-template-rows: 80vh min-content min-content min-content min-content min-content; } }
   @media only screen and (max-width: 41em) {
     .container {
       grid-template-columns: [full-start] minmax(1rem, 6rem) [center-start] repeat(8, [col-start] 1fr [col-end]) [center-end] minmax(1rem, 6rem) [full-end];
-      grid-template-rows: 65vh min-content min-content min-content min-content min-content; } }
+      grid-template-rows: 90vh min-content min-content min-content min-content min-content; } }
   @media only screen and (max-width: 36.125em) {
     .container {
-      grid-template-columns: [full-start] minmax(1rem, 3rem) [center-start] repeat(8, [col-start] 1fr [col-end]) [center-end] minmax(1rem, 3rem) [full-end]; } }
-  @media only screen and (max-width: 31.4375em) {
+      grid-template-columns: [full-start] minmax(1rem, 3rem) [center-start] repeat(8, [col-start] 1fr [col-end]) [center-end] minmax(1rem, 3rem) [full-end];
+      grid-template-rows: 80vh min-content min-content min-content min-content min-content; } }
+  @media only screen and (max-width: 32.5em) {
     .container {
       grid-template-columns: [full-start] minmax(1rem, 0) [center-start] repeat(8, [col-start] 1fr [col-end]) [center-end] minmax(1rem, 0) [full-end];
       grid-template-rows: 70vh min-content min-content min-content min-content min-content; } }
@@ -365,7 +403,7 @@ body {
 .header__content {
   grid-column: center-start/col-start 4;
   display: grid; }
-  @media only screen and (max-width: 31.4375em) {
+  @media only screen and (max-width: 32.5em) {
     .header__content {
       grid-column: full-start/col-start 6;
       background-image: linear-gradient(to bottom, #403b4a, rgba(81, 200, 61, 0.75)), url(../img/img-2.jpg);
@@ -383,10 +421,12 @@ body {
   background-size: cover;
   background-position: left;
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 15% 100%); }
-  @media only screen and (max-width: 31.4375em) {
+  @media only screen and (max-width: 32.5em) {
     .header__navigation {
       grid-column: col-start 6/ full-end;
-      background-image: url(../img/img-4.jpg);
+      background-image: url(../img/img-4_i.jpg);
+      background-position: bottom;
+      background-size: cover;
       clip-path: polygon(0px 0px, 100% 0px, 98.41% 80.47%, -39px 91.12%); } }
 
 .features {
@@ -395,15 +435,23 @@ body {
   display: grid;
   grid-gap: 3rem;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  text-align: center; }
+  text-align: center;
+  grid-auto-columns: 1fr; }
   @media only screen and (max-width: 74.1875em) {
     .features {
       grid-gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); } }
-  @media only screen and (max-width: 36.125em) {
+      grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr)); } }
+  @media only screen and (max-width: 45.9375em) {
     .features {
       grid-gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); } }
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); } }
+  @media only screen and (max-width: 41em) {
+    .features {
+      margin-left: 3rem;
+      margin-right: 3rem; } }
+  @media only screen and (max-width: 36.125em) {
+    .features {
+      grid-gap: 2rem; } }
 
 .menu {
   margin: 2rem 0;
@@ -421,6 +469,10 @@ body {
     @media only screen and (max-width: 41em) {
       .menu__row {
         grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr)); } }
+  @media only screen and (max-width: 41em) {
+    .menu {
+      margin-left: 3rem;
+      margin-right: 3rem; } }
 
 .discover {
   grid-column: 1/-1;
@@ -456,12 +508,11 @@ body {
       grid-template-rows: repeat(3, min-content); } }
 
 .footer {
-  margin-top: 7rem;
+  margin-top: 10rem;
   grid-column: center-start/col-end 8;
   display: grid;
   grid-gap: 5rem;
   grid-template-columns: 40% repeat(3, 1fr); }
-  @media only screen and (max-width: 31.4375em) {
+  @media only screen and (max-width: 32.5em) {
     .footer {
-      display: none;
-      clip-path: polygon(11% 0, 100% 0, 100% 100%, 0% 100%); } }
+      display: none; } }

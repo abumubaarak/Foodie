@@ -152,9 +152,18 @@ box-shadow: 2px 5px 31px 6px #51C83D;
 
     @media only screen and (max-width:$small_1-bp){
     &__item:nth-child(3){
+        //grid-auto-columns: 30rem;
         grid-column: 1/-1;
     }
-    }
+}
+
+    @media only screen and (max-width:$medium_small-bp){
+        &__item:nth-child(3){
+          grid-column: 1/-1;
+        }
+    
+}
+ 
 
     &__item{
         background-color: white;
@@ -307,7 +316,18 @@ box-shadow: 2px 5px 31px -6px #51C83D;
     padding-left:5vw;
     padding-right: 5vw;
 
+ 
     }
+
+
+    @media only screen and (max-width:$small-bp){
+      
+        max-width: 65%;
+
+    
+     
+        }
+     
 
     &__heading{
       
@@ -317,6 +337,18 @@ box-shadow: 2px 5px 31px -6px #51C83D;
         line-height: 4.5rem;
         align-self: start;
         margin-bottom: 4rem;
+
+        @media only screen and (max-width:$small-bp){
+            font-size: 2.5rem;
+            line-height: 3.5rem;
+        }
+
+        @media only screen and (max-width:$small_2-bp){
+             line-height: 3rem;
+        }
+        @media only screen and (max-width:$small_3-bp){
+             line-height: 3rem;
+        }
      }
 
      &__image{
@@ -368,16 +400,22 @@ box-shadow: 2px 5px 31px -6px #51C83D;
 
     &__email{
         border: none;
+        padding: 1rem;
+        font-size: 2rem;
+        font-family: $font-secondary;
+        font-weight: 300;
         grid-column: 1/span 3;
     }
     &__btn{
         background-color: $color-primary;
         color: white;
-        font-size: 1.4rem;
+        font-family: $font-secondary;
+
+        font-size: 1.9rem;
         border-radius: 2rem;
         border: none;
-        font-weight: 400;
-     
+        font-weight: 300;
+    
         padding: .8rem ;
     }
     &__sub{
@@ -431,9 +469,20 @@ box-shadow: 2px 5px 31px -6px #51C83D;
 
     }
 
+    &__about{
+        @media only screen and (max-width:$small-bp){
+        grid-column: 1/-1;
+
+        }
+    }
     &__nav{
         list-style: none;
-
+       
+        @media only screen and (max-width:$small-bp){
+            display: grid;
+            grid-template-columns: repeat(auto-fit,10rem);
+    
+        }
         &__heading{
 
         }
@@ -451,6 +500,10 @@ box-shadow: 2px 5px 31px -6px #51C83D;
     display: grid;
     grid-column: 1/-1;
     padding-bottom: 2rem;
+
+    @media only screen and (max-width:$medium_small-bp){
+     //  grid-row: 4/span 2;
+    }
 
     }
 
