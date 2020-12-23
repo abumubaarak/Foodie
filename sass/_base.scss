@@ -1,5 +1,15 @@
-$font-primary: 'Ubuntu', sans-serif;
+$font-primary: 'Raleway', sans-serif;
+$font-secondary: 'Ubuntu', sans-serif;
 $color-primary:#51C83D;
+
+$largest-bp:86.8125em; //1389
+$large-bp:84.75em; //1356
+$medium-bp:74.1875em;//1187
+$medium_small-bp:45.9375em;//735
+$small-bp:41em;//634
+$small_1-bp:36.125em;
+$small_2-bp:31.4375em;
+
 * {
     padding: 0;
     margin: 0; }
@@ -11,7 +21,38 @@ $color-primary:#51C83D;
   
   html {
     box-sizing: border-box;
-    font-size: 62.5%; }
+    font-size: 62.5%; 
+  
+    @media only screen and (max-width:$medium-bp){
+      
+       
+      font-size: 53.3%; 
+
+      }
+
+      @media only screen and (max-width:$medium_small-bp){
+      
+       
+        font-size: 45.5%; 
+  
+        }
+
+        @media only screen and (max-width:$small-bp){
+      
+       
+          font-size: 44%; 
+    
+          }
+
+          @media only screen and (max-width:$small_1-bp){
+            font-size: 42.5%; 
+
+          }
+          @media only screen and (max-width:$small_2-bp){
+            font-size: 38%; 
+
+          }
+  }
   
   
   body {
