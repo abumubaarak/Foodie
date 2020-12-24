@@ -470,17 +470,20 @@ box-shadow: 2px 5px 31px -6px #51C83D;
     }
 
     &__about{
-        @media only screen and (max-width:$small-bp){
+        @media only screen and (max-width:$small_2-bp){
         grid-column: 1/-1;
+       // margin-left: 5rem;
 
         }
     }
     &__nav{
         list-style: none;
        
-        @media only screen and (max-width:$small-bp){
-            display: grid;
-            grid-template-columns: repeat(auto-fit,10rem);
+        @media only screen and (max-width:$small_2-bp){
+            text-align: center;
+            //display: grid;
+         //   grid-template-columns: repeat(auto-fit,10rem);
+            //justify-self: center;
     
         }
         &__heading{
@@ -501,8 +504,8 @@ box-shadow: 2px 5px 31px -6px #51C83D;
     grid-column: 1/-1;
     padding-bottom: 2rem;
 
-    @media only screen and (max-width:$medium_small-bp){
-     //  grid-row: 4/span 2;
+    @media only screen and (max-width:$small_2-bp){
+       grid-row: 6/ 7;
     }
 
     }
